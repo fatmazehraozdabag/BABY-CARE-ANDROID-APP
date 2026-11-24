@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🛀 Banyo Takibi"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Süre Alanı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banyo Süresi (dakika)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtBathDuration"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: 10"
+            android:inputType="number"
+            android:backgroundTint="#4A148C"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Hızlı Süre Butonları -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnBathDur5"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="5 dk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:backgroundTint="#EEDCFA" />
+
+            <Button
+                android:id="@+id/btnBathDur10"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="10 dk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:backgroundTint="#EEDCFA" />
+
+            <Button
+                android:id="@+id/btnBathDur15"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="15 dk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:backgroundTint="#EEDCFA" />
+
+            <Button
+                android:id="@+id/btnBathDur20"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:text="20 dk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:backgroundTint="#EEDCFA" />
+        </LinearLayout>
+
+        <!-- Hızlı Not Butonları -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hızlı Not Ekle"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnNoteHappy"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="Huzurlu geçti"
+                android:textSize="12sp"
+                android:textColor="#4A148C"
+                android:backgroundTint="#F3E5F5" />
+
+            <Button
+                android:id="@+id/btnNoteHair"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="Saç yıkandı"
+                android:textSize="12sp"
+                android:textColor="#4A148C"
+                android:backgroundTint="#F3E5F5" />
+
+            <Button
+                android:id="@+id/btnNoteMassage"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="Masaj yapıldı"
+                android:textSize="12sp"
+                android:textColor="#4A148C"
+                android:backgroundTint="#F3E5F5" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtBathNote"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Not..."
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Kaydet Butonu -->
+        <Button
+            android:id="@+id/btnSaveBath"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Banyo Kaydını Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A148C" />
+
+        <!-- Geçmiş Kayıtlar Listesi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Banyo Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/recordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>

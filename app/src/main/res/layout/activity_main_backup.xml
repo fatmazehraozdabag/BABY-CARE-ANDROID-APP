@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="219dp"
+            android:layout_height="158dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Bebek Fotoğrafı"
+            android:scaleType="fitCenter"
+            android:src="@drawable/babyphotos" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Baby Care"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Bebeğinin günlük bakımını kolayca takip et"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btnDailySummary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="📊 Günlük Özet"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btnFeeding"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="🍼 Beslenme"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSleeping"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="😴 Uyku"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDiaper"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="🚼 Bez / Tuvalet"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnBath"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="🛀 Banyo"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>

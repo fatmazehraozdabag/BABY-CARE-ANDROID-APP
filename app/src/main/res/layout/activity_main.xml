@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Üst Başlık & Tıklanabilir Bebek Profil Alanı -->
+        <LinearLayout
+            android:id="@+id/layoutProfileHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="18dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Bebek Fotoğrafı"
+                android:src="@drawable/babyphotos" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+
+                <TextView
+                    android:id="@+id/txtBabyHeaderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baby Care 👶"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3142" />
+
+                <TextView
+                    android:id="@+id/txtBabyHeaderAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil oluşturmak için dokun ✏️"
+                    android:textSize="14sp"
+                    android:textColor="#7A7E8F"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="›"
+                android:textSize="28sp"
+                android:textColor="#B0B5C1"
+                android:layout_marginEnd="6dp" />
+        </LinearLayout>
+
+        <!-- Günlük Özet Kartı / Butonu -->
+        <Button
+            android:id="@+id/btnDailySummary"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="📊 Günlük Özet ve İstatistikler"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4F6D7A"
+            android:layout_marginBottom="22dp" />
+
+        <!-- Hızlı Kayıt Ekle Başlığı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Günlük Bakım Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 1. Satır: Beslenme & Uyku -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnFeeding"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="🍼\nBeslenme"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+
+            <Button
+                android:id="@+id/btnSleeping"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="😴\nUyku"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0D47A1"
+                android:backgroundTint="#D7E7FF" />
+        </LinearLayout>
+
+        <!-- 2. Satır: Bez & Banyo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnDiaper"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="🚼\nBez Değişimi"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#BF360C"
+                android:backgroundTint="#FFE2D1" />
+
+            <Button
+                android:id="@+id/btnBath"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="🛀\nBanyo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:backgroundTint="#EEDCFA" />
+        </LinearLayout>
+
+        <!-- Boy & Kilo Gelişim Butonu -->
+        <Button
+            android:id="@+id/btnGrowth"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#E8F5E9"
+            android:text="📏 Bebeğin Boy &amp; Kilo Gelişim Takibi"
+            android:textColor="#1B5E20"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

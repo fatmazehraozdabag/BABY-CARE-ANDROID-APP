@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📏 Büyüme &amp; Gelişim"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Ölçüm Tarihi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ölçüm Tarihi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtGrowthDate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Tarih seçin (GG.AA.YYYY)"
+            android:focusable="false"
+            android:clickable="true"
+            android:backgroundTint="#2E7D32"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Kilo (kg) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kilo (kg)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtGrowthWeight"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: 5.85"
+            android:inputType="numberDecimal"
+            android:backgroundTint="#2E7D32"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Boy (cm) ve Baş Çevresi (cm) Yan Yana -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boy (cm)"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#555A6E"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/edtGrowthHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: 62"
+                    android:inputType="numberDecimal"
+                    android:backgroundTint="#2E7D32"
+                    android:textSize="16sp"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baş Çevresi (cm)"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#555A6E"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/edtGrowthHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: 41"
+                    android:inputType="numberDecimal"
+                    android:backgroundTint="#2E7D32"
+                    android:textSize="16sp"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Not -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doktor Notu / Gözlem (İsteğe bağlı)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtGrowthNote"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Örn: 3. ay doktor kontrolü, gelişimi normal..."
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Kaydet Butonu -->
+        <Button
+            android:id="@+id/btnSaveGrowth"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ölçümü Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32" />
+
+        <!-- Geçmiş Ölçümler Listesi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Gelişim Ölçümleri"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/growthRecordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>

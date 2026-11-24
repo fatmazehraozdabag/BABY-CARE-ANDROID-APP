@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😴 Uyku Takibi"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Saat Giriş Alanları (Başlangıç ve Bitiş) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <!-- Uyku Başlangıç Saati -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uyku Başlangıcı"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#555A6E"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/edtSleepStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: 10.00"
+                    android:gravity="center"
+                    android:inputType="time|number"
+                    android:digits="0123456789.:"
+                    android:backgroundTint="#0D47A1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Uyku Bitiş Saati -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uyanış Saati"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#555A6E"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/edtSleepEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: 11.30"
+                    android:gravity="center"
+                    android:inputType="time|number"
+                    android:digits="0123456789.:"
+                    android:backgroundTint="#0D47A1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Otomatik Hesaplanan Süre Bilgi Kutusu -->
+        <TextView
+            android:id="@+id/txtCalculatedDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏱️ Hesaplanan Süre: Henüz yazılmadı"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:background="#D7E7FF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Not Girişi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not (İsteğe bağlı)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtSleepNote"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="top"
+            android:hint="Örn: Kolay uyudu, müzik dinledi..."
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Kaydet Butonu -->
+        <Button
+            android:id="@+id/btnSaveSleep"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Uyku Kaydını Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0D47A1"
+            android:textColor="#FFFFFF" />
+
+        <!-- Geçmiş Kayıtlar Listesi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Uyku Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/recordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>

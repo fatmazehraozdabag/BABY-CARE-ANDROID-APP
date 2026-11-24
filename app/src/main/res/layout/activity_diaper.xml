@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚼 Bez Değişimi"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hızlı Seçim"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Hızlı Seçim Butonları (1. Satır: Islak & Kirli) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnTypeWet"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="💧 Islak Bez"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#0D47A1"
+                android:backgroundTint="#D7E7FF" />
+
+            <Button
+                android:id="@+id/btnTypeDirty"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="🟤 Kirli Bez"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#BF360C"
+                android:backgroundTint="#FFE2D1" />
+        </LinearLayout>
+
+        <!-- Hızlı Seçim Butonları (2. Satır: İkisi Birlikte & Temiz) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnTypeBoth"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="💧+🟤 Islak &amp; Kirli"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#E65100"
+                android:backgroundTint="#FFF3E0" />
+
+            <Button
+                android:id="@+id/btnTypeClean"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="✨ Temiz / Değişti"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+        </LinearLayout>
+
+        <!-- Seçilen veya Elle Girilen Bez Türü -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bez Durumu"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtDiaperType"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Butonlara basabilir veya yazabilirsiniz"
+            android:inputType="text|textCapSentences"
+            android:backgroundTint="#BF360C"
+            android:minHeight="48dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Not Girişi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not (İsteğe bağlı)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtDiaperNote"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="Örn: Pişik kremi sürüldü..."
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnSaveDiaper"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Bez Kaydını Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#BF360C" />
+
+        <!-- Geçmiş Kayıtlar Listesi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Bez Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/recordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>

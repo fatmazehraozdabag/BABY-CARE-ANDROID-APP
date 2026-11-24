@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👶 Bebek Profili"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Profil Görseli -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/babyphotos"
+            android:layout_gravity="center"
+            android:contentDescription="Bebek Resmi"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Canlı Yaş Göstergesi Kartı -->
+        <TextView
+            android:id="@+id/txtProfileAgeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎂 Doğum tarihini girerek yaşı hesaplayın"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#4F6D7A"
+            android:gravity="center"
+            android:background="#E2E8F0"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Bebek Adı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebeğin Adı"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtBabyName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: Ali, Zeynep..."
+            android:inputType="textCapWords"
+            android:backgroundTint="#4F6D7A"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Doğum Tarihi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doğum Tarihi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Tarih seçmek için dokunun (GG.AA.YYYY)"
+            android:focusable="false"
+            android:clickable="true"
+            android:backgroundTint="#4F6D7A"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Cinsiyet Seçimi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cinsiyet"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnGenderGirl"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="👧 Kız"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#C2185B"
+                android:backgroundTint="#FCE4EC" />
+
+            <Button
+                android:id="@+id/btnGenderBoy"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="👦 Erkek"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1565C0"
+                android:backgroundTint="#E3F2FD" />
+        </LinearLayout>
+
+        <!-- Kan Grubu (İsteğe Bağlı) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kan Grubu (İsteğe bağlı)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtBloodType"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: A Rh+, 0 Rh-..."
+            android:inputType="textCapCharacters"
+            android:backgroundTint="#4F6D7A"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Kaydet Butonu -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Profili Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4F6D7A"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Boy & Kilo Gelişim Butonu -->
+        <Button
+            android:id="@+id/btnGoToGrowth"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="📏 Boy &amp; Kilo Gelişim Takibi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1B5E20"
+            android:backgroundTint="#DCEED8" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍼 Beslenme Takibi"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Miktar Alanı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beslenme Miktarı (ml)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: 90"
+            android:inputType="number"
+            android:backgroundTint="#1B5E20"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Hızlı Miktar Artırma Butonları -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="18dp">
+
+            <Button
+                android:id="@+id/btnAdd30"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="+30"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+
+            <Button
+                android:id="@+id/btnAdd60"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="+60"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+
+            <Button
+                android:id="@+id/btnAdd90"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="+90"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+
+            <Button
+                android:id="@+id/btnAdd120"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="+120"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#DCEED8" />
+
+            <Button
+                android:id="@+id/btnClearAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Sil"
+                android:textSize="13sp"
+                android:textColor="#C62828"
+                android:backgroundTint="#FFEBEE" />
+        </LinearLayout>
+
+        <!-- Süre Alanı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beslenme / Emzirme Süresi (dakika)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtDuration"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Örn: 15"
+            android:inputType="number"
+            android:backgroundTint="#1B5E20"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Hızlı Süre Butonları -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="18dp">
+
+            <Button
+                android:id="@+id/btnDur5"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="5 dk"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#E8F5E9" />
+
+            <Button
+                android:id="@+id/btnDur10"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="10 dk"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#E8F5E9" />
+
+            <Button
+                android:id="@+id/btnDur15"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="15 dk"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#E8F5E9" />
+
+            <Button
+                android:id="@+id/btnDur20"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="20 dk"
+                android:textSize="13sp"
+                android:textColor="#1B5E20"
+                android:backgroundTint="#E8F5E9" />
+        </LinearLayout>
+
+        <!-- Not Girişi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not (İsteğe bağlı)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#555A6E"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edtNote"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="Örn: Anne sütü / mama, iştahı iyiydi..."
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Kaydet Butonu -->
+        <Button
+            android:id="@+id/btnSaveFeeding"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Beslenme Kaydını Kaydet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1B5E20" />
+
+        <!-- Geçmiş Kayıtlar Listesi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Beslenme Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3142"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/recordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>
